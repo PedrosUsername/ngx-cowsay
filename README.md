@@ -1,27 +1,71 @@
-# LibWorkspace
+# ngx-cowsay
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+````
+ ______
+< bruh >
+ ------
+        \   ^__^
+         \  (OO)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+````
 
-## Development server
+ngx-cowsay is a "ng add friendly" minimal version of [piuccio's cowsay](https://github.com/piuccio/cowsay).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Install
 
-## Code scaffolding
+    $ ng add ngx-cowsay
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+````
+import { NgxCowsayService } from 'ngx-cowsay'
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+@Component
+export class AppComponent {
 
-## Running unit tests
+  constructor(private cowsay: NgxCowsayService){
+    this.cowsay.log("hello world");
+  }
+}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+````
+you can also try:
 
-## Running end-to-end tests
+    this.cowsay.log("cogito ergo sum", "MOOSE", "t", false);
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+````
+ _________________
+( cogito ergo sum )
+ -----------------
+  o
+   o   \_\_    _/_/
+    o      \__/
+           (--)\_______
+           (__)\       )\/\
+               ||----w |
+               ||     ||
+````
 
-## Further help
+### Art options:
+- "DEFAULT",
+- "SMALL",
+- "MUTILATED",
+- "MOOSE",
+- "VADER"
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Mood options:
+- "a" (Attacked)
+- "b" (Borg)
+- "d" (Dead)
+- "g" (Greedy)
+- "p" (Paranoia)
+- "s" (Stoned)
+- "t" (Tired)
+- "w" (Wired)
+- "y" (Youthful)
+
+### SayALoud options:
+- true (cow will say it)
+- false (cow will think it)
