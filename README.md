@@ -11,7 +11,7 @@
                 ||     ||
 ````
 
-ngx-cowsay is a "ng add friendly" minimal version of [piuccio's cowsay](https://github.com/piuccio/cowsay).
+ngx-cowsay is a "ng add friendly" minimal version of [piuccio's cowsay](https://github.com/piuccio/cowsay) for Angular projects.
 
 ## Install
 
